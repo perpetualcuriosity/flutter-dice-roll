@@ -15,7 +15,7 @@
    ```
 2. Navigate to the project directory:
    ```sh
-   cd roll_the_dice
+   cd flutter-dice-roll/flutter_dice_roll
    ```
 3. Get the dependencies:
    ```sh
