@@ -9,7 +9,7 @@ class Scaff extends StatefulWidget {
 
 class _Scaff extends State<Scaff> {
   List<Color> col = [Color(0xff1d4350), Color(0xffa43931)];
-  String path = 'assets/1.png';
+  String path = 'lib/assets/1.png';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,17 +25,20 @@ class _Scaff extends State<Scaff> {
       ),
       body: Container(
         decoration: BoxDecoration(gradient: LinearGradient(colors: col)),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          mainAxisSize: MainAxisSize.max,
-          children: [
-            Image.asset(path),
-            OutlinedButton(onPressed: () {
-              setState(() {
-                path = 'assets/${randomNumberGenerator()}.png';
-              });
-            }, child: Text('Roll!',style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold)))
-          ],
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisSize: MainAxisSize.max,
+            children: [
+              Image.asset(path,height: 300,width: 300),
+              SizedBox(height: 10),
+              OutlinedButton(onPressed: () {
+                setState(() {
+                  path = 'lib/assets/${randomNumberGenerator()}.png';
+                });
+              }, child: Text('Roll!',style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold)))
+            ],
+          ),
         ),
       ),
     );
