@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_dice_roll/diceroll_scaffold.dart';
 
 class MatApp extends StatelessWidget
 {
@@ -7,7 +8,8 @@ class MatApp extends StatelessWidget
     Widget build(BuildContext context)
     {
         return MaterialApp(
-          debugShowCheckedModeBanner: false
+          debugShowCheckedModeBanner: false,
+          home: Scaff(),
         );
     }
 }
