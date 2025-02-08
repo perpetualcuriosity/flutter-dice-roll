@@ -8,7 +8,7 @@ class Scaff extends StatefulWidget {
 }
 
 class _Scaff extends State<Scaff> {
-  List<Color> col = [Color(0xff1d4350), Color(0xffa43931)];
+  List<Color> col = [Color(0xff780206), Color(0xff061161)];
   String path = 'lib/assets/1.png';
   @override
   Widget build(BuildContext context) {
