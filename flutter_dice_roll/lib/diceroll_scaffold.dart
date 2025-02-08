@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_dice_roll/random_number_generator.dart';
 
 class Scaff extends StatefulWidget {
   const Scaff({super.key});
@@ -8,6 +9,7 @@ class Scaff extends StatefulWidget {
 
 class _Scaff extends State<Scaff> {
   List<Color> col = [Color(0xff1d4350), Color(0xffa43931)];
+  String path = 'assets/1.png';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,8 +26,16 @@ class _Scaff extends State<Scaff> {
       body: Container(
         decoration: BoxDecoration(gradient: LinearGradient(colors: col)),
         child: Column(
-            Image.asset('assets/1.png'),
-            
+          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisSize: MainAxisSize.max,
+          children: [
+            Image.asset(path),
+            OutlinedButton(onPressed: () {
+              setState(() {
+                path = 'assets/${randomNumberGenerator()}.png';
+              });
+            }, child: Text('Roll!',style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold)))
+          ],
         ),
       ),
     );
