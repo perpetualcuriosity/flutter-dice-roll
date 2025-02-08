@@ -23,7 +23,9 @@ class _Scaff extends State<Scaff> {
       ),
       body: Container(
         decoration: BoxDecoration(gradient: LinearGradient(colors: col)),
-        child: Column(),
+        child: Column(
+            
+        ),
       ),
     );
   }
